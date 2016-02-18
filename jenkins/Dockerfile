@@ -2,12 +2,12 @@ FROM jenkins:1.642.1
 
 USER root
 
-ENV http_proxy		http://bc.intern.folksam.se:8080
-ENV HTTP_PROXY		http://bc.intern.folksam.se:8080
-ENV https_proxy		http://bc.intern.folksam.se:8080
-ENV HTTPS_PROXY		http://bc.intern.folksam.se:8080
-ENV NO_PROXY        'localhost,nexus.intern.folksam.se,svn.folknet.intern.folksam.se'
-ENV no_proxy        'localhost,nexus.intern.folksam.se,svn.folknet.intern.folksam.se'
+#ENV http_proxy		http://bc.intern.folksam.se:8080
+#ENV HTTP_PROXY		http://bc.intern.folksam.se:8080
+#ENV https_proxy		http://bc.intern.folksam.se:8080
+#ENV HTTPS_PROXY		http://bc.intern.folksam.se:8080
+#ENV NO_PROXY        'localhost,nexus.intern.folksam.se,svn.folknet.intern.folksam.se'
+#ENV no_proxy        'localhost,nexus.intern.folksam.se,svn.folknet.intern.folksam.se'
 
 # See: http://docs.docker.com/engine/installation/debian/#installation
 # apt-cache showpkg docker-engine

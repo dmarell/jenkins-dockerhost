@@ -1,7 +1,7 @@
 nginx:
   image: nginx
-  env_file:
-    - ./proxy.env
+#  env_file:
+#    - ./proxy.env
   ports:
     - "80:80"
   volumes:
