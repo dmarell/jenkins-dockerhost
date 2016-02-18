@@ -1,6 +1,4 @@
 {
-  "proxy": "http://bc.intern.folksam.se:8080",
-  "https-proxy": "http://bc.intern.folksam.se:8080",
   "storage": {
     "packages" : ".bower/packages",
     "registry" : ".bower/registry",
