@@ -1,0 +1,18 @@
+FROM jenkins:1.642.1
+
+USER root
+
+COPY data-init.sh /data-init/
+RUN chmod a+rx /data-init/data-init.sh
+COPY bowerrc /data-init/.bowerrc
+COPY settings.xml /data-init/.m2/settings.xml
+COPY id_rsa-jenkins /data-init/.ssh/id_rsa
+COPY id_rsa-jenkins.pub /data-init/.ssh/id_rsa.pub
+RUN ssh-keyscan jenkins-dockerhost >> /data-init/.ssh/known_hosts
+RUN chown -R jenkins:jenkins /data-init
+
+COPY plugins.txt /usr/share/jenkins/plugins.txt
+
+USER jenkins
+
+ENTRYPOINT ["/data-init/data-init.sh"]

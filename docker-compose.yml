@@ -1,0 +1,27 @@
+nginx:
+  image: nginx
+  env_file:
+    - ./proxy.env
+  ports:
+    - "80:80"
+  volumes:
+    - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    - ./nginx/html:/usr/share/nginx/html:ro
+  extra_hosts:
+    - "jenkins-dockerhost:192.168.0.123"
+
+jenkins:
+  build: ./jenkins
+  command: --prefix=/jenkins --logfile=/var/jenkins_home/jenkins.log
+  ports:
+    - "9115:8080"
+  volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"
+  volumes_from:
+    - jenkins-data
+
+jenkins-data:
+  build: ./jenkins-data
+  command: /bin/true
+  volumes:
+    - /var/jenkins_home

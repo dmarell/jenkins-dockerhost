@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>jenkins-dockerhost</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+<h1>jenkins-dockerhost</h1>
+
+<br/>
+
+<h2>Core Services</h2>
+
+<br/>
+jenkins-dockerhost server version: $PROJECT_VERSION
+<br/>
+<br/>
+
+<table class="table">
+    <tr>
+        <td><a href="http://jenkins-dockerhost/jenkins">Jenkins</a></td>
+    </tr>
+</table>
+
+<p>
+
+<h2>Services</h2>
+
+<table class="table">
+    <tr>
+        <td>Module</td>
+        <td>Version online</td>
+        <td>API</td>
+    </tr>
+
+    <tr>
+        <td><a href="https://github.com/dmarell/dockerized-gs-rest-service.git">dockerized-gs-rest-service</a></td>
+        <td>
+            <iframe src="http://jenkins-dockerhost/service1/version" width="100%" height="20px" frameborder="0"
+                    marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        </td>
+        <td>Dynamic</a></td>
+        <td><a href="http://jenkins-dockerhost/service1/swagger-ui.html">Swagger-ui</a></td>
+    </tr>
+</table>
+
+</body>
+</html>
