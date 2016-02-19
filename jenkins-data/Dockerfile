@@ -8,7 +8,7 @@ COPY bowerrc /data-init/.bowerrc
 COPY settings.xml /data-init/.m2/settings.xml
 COPY id_rsa-jenkins /data-init/.ssh/id_rsa
 COPY id_rsa-jenkins.pub /data-init/.ssh/id_rsa.pub
-RUN ssh-keyscan jenkins-dockerhost >> /data-init/.ssh/known_hosts
+RUN ssh-keyscan ${JENKINS_DOCKERHOST_IP} >> /data-init/.ssh/known_hosts
 RUN chown -R jenkins:jenkins /data-init
 
 COPY plugins.txt /usr/share/jenkins/plugins.txt
