@@ -23,11 +23,12 @@ RUN apt-get update && apt-get install -y \
     bzip2 \
     sudo \
     docker-engine \
+    git \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN cd /opt && \
-    wget http://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.3.3/apache-maven-3.3.3-bin.zip && \
-    unzip apache-maven-3.3.3-bin.zip
+    wget http://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.3.9/apache-maven-3.3.9-bin.zip && \
+    unzip apache-maven-3.3.9-bin.zip
 
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
