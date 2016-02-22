@@ -29,5 +29,3 @@ services:
     command: /bin/true
     volumes:
       - /var/jenkins_home
-~
-~
