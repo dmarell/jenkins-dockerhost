@@ -33,8 +33,12 @@ $ sudo -i
 $ sudo -i
 # apt-get update
 # wget -qO- https://get.docker.com/ | sh
-# usermod -aG docker jenkins
 $ newgrp docker
+# usermod -aG docker jenkins
+
+```
+## HTTP proxy
+```
 $ vi /etc/default/docker
 ...
 export http_proxy="http://bc.intern.folksam.se:8080"
